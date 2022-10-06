@@ -13,7 +13,12 @@ public class AppOrderTest {
     @BeforeAll
     static void SetupAll() {
         //System.setProperty("webdriver.chrome.driver", "./drivers/win/chromedriver.exe");
-        WebDriverManager.chromedriver().setup();
+        if(System.getProperty("os.name").contains("Linux")){
+            System.setProperty("webdriver.chrome.driver", "./drivers/linux/chromedriver");
+        }else{
+            System.setProperty("webdriver.chrome.driver","./drivers/win/chromedriver.exe");
+        }
+        //WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach

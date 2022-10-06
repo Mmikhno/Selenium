@@ -31,7 +31,7 @@ public class AppOrderTest {
     }
 
     @Test
-    public void shouldTestFormPositive() throws InterruptedException {
+    public void shouldTestFormPositive() {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Анна-Мария Иванова");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79211234567");

@@ -1,5 +1,6 @@
 package ru.netology.web;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +12,8 @@ public class AppOrderTest {
 
     @BeforeAll
     static void SetupAll() {
-        System.setProperty("webdriver.chrome.driver", "./drivers/win/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "./drivers/win/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
